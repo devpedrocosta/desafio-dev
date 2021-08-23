@@ -16,16 +16,26 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'desafio'`, () => {
+  it(`should have as data '[]' empty array`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('desafio');
+    expect(app.data).toEqual([]);
   });
 
-  it('should render title', () => {
+  it(`should newProcess set data '[]' empty array`, () => {
     const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.newProcess();
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('desafio app is running!');
+    expect(app.data).toEqual([]);
   });
+
+  it(`should sendComplete set information on  data `, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.sendComplete([{name:12}]);
+    fixture.detectChanges();
+    expect(app.data).toEqual([{name:12}]as any);
+  });
+
 });

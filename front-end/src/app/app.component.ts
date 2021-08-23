@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'desafio';
+   data = [];
+ 
+
+  sendComplete(_event: any){
+   this.data = _event;
+  }
+
+  newProcess(){
+    this.data =  [];
+  }
 }
