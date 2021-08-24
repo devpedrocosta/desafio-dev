@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1629781083317" clover="3.2.0">
+  <project timestamp="1629781083317" name="All files">
+    <metrics statements="46" coveredstatements="44" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10" elements="56" coveredelements="54" complexity="0" loc="46" ncloc="46" packages="4" files="4" classes="4"/>
+    <package name="modules.financeiro.controller">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="financeiro.controller.ts" path="/Users/pedrojoaquimdacosta/test/desafio-dev/backend/src/modules/financeiro/controller/financeiro.controller.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="modules.financeiro.entity">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="financeiro.entity.ts" path="/Users/pedrojoaquimdacosta/test/desafio-dev/backend/src/modules/financeiro/entity/financeiro.entity.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="modules.financeiro.service">
+      <metrics statements="25" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+      <file name="financeiro.service.ts" path="/Users/pedrojoaquimdacosta/test/desafio-dev/backend/src/modules/financeiro/service/financeiro.service.ts">
+        <metrics statements="25" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="22" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="41" count="21" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.util">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="cnb.layout.ts" path="/Users/pedrojoaquimdacosta/test/desafio-dev/backend/src/shared/util/cnb.layout.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
