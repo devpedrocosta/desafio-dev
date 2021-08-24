@@ -1,62 +1,46 @@
+<p>TOTAL : {{getFormattedPrice(total)}}</p>
+<table class="table-scroll small-first-col">
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Data</th>
+      <th>Valor</th>
+      <th>CPF</th>
+      <th>Cartão</th>
+      <th>Hora</th>
+      <th>Nome loja</th>
+      <th>Dono da loja</th>
+    </tr>
+  </thead>
+  <tbody class="body-half-screen">
+  <div class="nodata" *ngIf="list.length === 0">Sem Dados</div>
 
-    <div class="table">
-      
-      <div class="row header">
-        <div class="cell">
-          Tipo
-        </div>
-        <div class="cell">
-          Data
-        </div>
-        <div class="cell">
-          Valor
-        </div>
-        <div class="cell">
-          CPF
-        </div>
-        <div class="cell">
-            Cartão
-          </div>
-          <div class="cell">
-            Hora
-          </div>
-          <div class="cell">
-            Dono da loja
-          </div>
-          <div class="cell">
-            Nome loja
-          </div>
-      </div>
-      
-    
-<div class="nodata" *ngIf="data.length===0">Sem Dados</div>
+   <tr *ngFor="let item of list">
+    <td>
+      {{ item?.tipo || 0 }}
+    </td>
+    <td>
+      {{ convertdata(item?.data || "") }}
+    </td>
+    <td>
+      {{ getFormattedPrice(item?.valor || 0) }}
+    </td>
+    <td>
+      {{ item?.cpf || "" }}
+    </td>
+    <td>
+      {{ item?.cartao || "" }}
+    </td>
+    <td>
+      {{ convertTime( item?.hora || 0) }}
+    </td>
+    <td>
+      {{ item?.nomeloja || "" }}
+    </td>
+    <td>
+      {{ item?.donodaloja || "" }}
+    </td>
 
-      <div class="row" *ngIf="data.length>0">
-        <div class="cell">
-            Tipo
-          </div>
-          <div class="cell">
-            Data
-          </div>
-          <div class="cell">
-            Valor
-          </div>
-          <div class="cell">
-            CPF
-          </div>
-          <div class="cell">
-              Cartão
-            </div>
-            <div class="cell">
-              Hora
-            </div>
-            <div class="cell">
-              Dono da loja
-            </div>
-            <div class="cell">
-              Nome loja
-            </div>
-      </div>
-      
-    </div>
-   
+  </tr>
+</tbody>
+</table>

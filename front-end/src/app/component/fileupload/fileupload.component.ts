@@ -35,7 +35,6 @@ export class FileuploadComponent {
   }
 
   processdata(): void {
-
     this.uploadservice.getUploadedData().subscribe((data) => {
       if (data.length>0) {
         this.complete.emit(data);
@@ -44,27 +43,14 @@ export class FileuploadComponent {
       }
 
     }, () => {
-      this.message = "Ao buscar dados no servidor"
+      this.message = "Nemhum dado foi encontrado"
     })
   }
 
   private upload(): void {
     this.progress = 0;
      const file:any = this.currentFile;
-      this.uploadservice.upload(file).subscribe(
-        (event: any) => {
-          if (event.type === HttpEventType.UploadProgress) {
-            this.progress = Math.round(100 * event.loaded / event.total);
-          } else  {
-           this.processdata();
-          }
-        },
-        (err: any) => {
-            this.message = 'Ocoreu um erro ao enviar seu arquivo ';
-        });
-
+      this.uploadservice.upload(file).subscribe(() => {this.processdata();},
+        () => {this.message = 'Ocoreu um erro ao enviar seu arquivo ';});
     }
-
-
-  
 }

@@ -69,7 +69,7 @@ describe('Testing File Upload component', () => {
     spyOn(component.uploadservice, 'getUploadedData').and.returnValue(throwError('Error'));
     component.processdata();
     fixture.detectChanges();
-    expect(component.message).toEqual('Ao buscar dados no servidor');
+    expect(component.message).toEqual('Nemhum dado foi encontrado');
   });
 
 
@@ -108,20 +108,6 @@ describe('Testing File Upload component', () => {
   });
 
 
-  it('should progress upload data ', () => {
-    spyOn(component.uploadservice, 'upload').and.returnValue(of({loaded:4,total:2,type:HttpEventType.UploadProgress} as any));
-    const dataTransfer = new DataTransfer()
-    dataTransfer.items.add(new File([''], 'test-file.txt',{type:'text/plain'}))
-
-    const inputDebugEl  = fixture.debugElement.query(By.css('input[type=file]'));
-    inputDebugEl.nativeElement.files = dataTransfer.files;
-
-    inputDebugEl.nativeElement.dispatchEvent(new InputEvent('change'));
-
-    fixture.detectChanges();
-
-    expect(component.progress).toBe(200);
-  });
 
   it('should upload data ', () => {
      spyOn(component.uploadservice, 'getUploadedData').and.returnValue(of([{nome:2}]));

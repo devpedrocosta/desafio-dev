@@ -5,7 +5,7 @@
       *ngIf="data.length===0"
       (complete)="sendComplete($event)"
     ></app-fileupload>
-    <app-table *ngIf="data.length>0"></app-table>
+    <app-table [data]="data" *ngIf="data.length>0"></app-table>
   </div>
   <div class="upload-footer">
     <button class="btn-primary"  (click)="newProcess()" *ngIf="data.length>0">Novo Upload</button>

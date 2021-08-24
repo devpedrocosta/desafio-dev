@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UploadService {
-  SERVER_URL: string = "http://127.0.0.1:3000/";
+  SERVER_URL: string = "http://127.0.0.1:3000/api/";
   constructor(private http: HttpClient) { }
 
   upload(file: File): Observable<HttpEvent<any>> {
@@ -14,10 +14,7 @@ export class UploadService {
 
     formData.append('file', file);
 
-    const req = new HttpRequest('POST', `${this.SERVER_URL}upload`, formData, {
-      reportProgress: true,
-      responseType: 'json',
-    });
+    const req = new HttpRequest('POST', `${this.SERVER_URL}upload`, formData);
 
     return this.http.request(req);
   }
